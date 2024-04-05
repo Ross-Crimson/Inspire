@@ -6,10 +6,10 @@ import { api } from "./AxiosService.js"
 class ToDosService {
     async GetToDos() {
         const results = await api.get('api/todos')
-        console.log("📃", results)
+        //console.log("📃", results)
         const toDoList = results.data.map(todo => new ToDo(todo))
         AppState.toDos = toDoList
-        console.log("✔📃", AppState.toDos)
+        //console.log("✔📃", AppState.toDos)
 
         this.RemainingTodoCount()
     }

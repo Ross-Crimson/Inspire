@@ -9,3 +9,9 @@
 .profile-picture.profile-picture-sm {
   height: 64px;
 }
+
+.backGroundImgSettings {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
