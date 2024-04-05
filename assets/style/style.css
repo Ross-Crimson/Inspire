@@ -28,3 +28,12 @@
   opacity: 1;
   transition: all 1s linear;
 }
+
+.bg-glass {
+  background-color: rgba(61, 61, 61, 0.289);
+  backdrop-filter: blur(20px);
+}
+
+.blockStyle {
+  display: inline-block;
+}

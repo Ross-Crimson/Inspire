@@ -7,12 +7,19 @@ import { setHTML } from "../utils/Writer.js"
 
 export class ToDosController {
     constructor() {
-        console.log("todo controller is hooked up")
         AppState.on('account', this.GetToDos)
         AppState.on('toDos', this.DrawToDos)
     }
 
     async GetToDos() {
+        const ToDoForm = document.getElementById('toDo-form')
+        if (AppState.account == null) {
+            ToDoForm.classList.add('hidden')
+            return
+        }
+        else {
+            ToDoForm.classList.remove('hidden')
+        }
         try {
             await toDosService.GetToDos()
 

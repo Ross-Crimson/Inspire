@@ -1,25 +1,40 @@
 <section class="container-fluid">
     <div class="row">
-        <div class="col-6">
-            <div id="todo-count"></div>
-            <form onsubmit="app.ToDosController.CreateToDo()">
+        <div class="col-3">
+            <div id="toDo-form" class="rounded bg-glass py-3 px-5 hidden text-light">
+
+
+                <div id="todo-count" class="p-2"></div>
+
                 <div>
-                    <input type="text" name="description" id="description" min="1" max="500" required>
-                    <button type="submit"><i class="mdi mdi-plus-circle-outline"></i></button>
+                    <form onsubmit="app.ToDosController.CreateToDo()">
+                        <div>
+                            <input type="text" class="rounded" name="description" id="description" min="1" max="500"
+                                required>
+                            <button type="submit" class="btn btn-clear"><i
+                                    class="mdi mdi-plus-circle-outline"></i></button>
+                        </div>
+                    </form>
                 </div>
-            </form>
 
-            <div id="current-todos" class="">
 
+                <div id="current-todos" class=""></div>
             </div>
 
-            <div id="quote-area">
+        </div>
+    </div>
 
-            </div>
+    <div class="row justify-content-between fixed-bottom bg-glass m-3 rounded-pill align-items-center text-light">
+        <div class="col-4">
+            <div class="text-center" id="weather-area"></div>
+        </div>
 
-            <div id="weather-area">
+        <div class="col-4">
+            <h3 class="text-center" id="currentTime"></h3>
+        </div>
 
-            </div>
+        <div class="col-4">
+            <div id="quote-area"></div>
         </div>
     </div>
 </section>
