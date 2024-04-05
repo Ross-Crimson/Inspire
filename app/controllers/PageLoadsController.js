@@ -5,6 +5,7 @@ import { pageLoadsService } from "../services/PageLoadsService.js"
 export class PageLoadsController {
     constructor() {
         this.GetBackgroundImg()
+        this.GetQuote()
     }
 
     async GetBackgroundImg() {

@@ -1,3 +1,5 @@
+import { Quote } from "../models/DataModels.js"
+import { setHTML } from "../utils/Writer.js"
 import { api } from "./AxiosService.js"
 
 class PageLoadsService {
@@ -9,8 +11,11 @@ class PageLoadsService {
         document.body.style.backgroundImage = `url(${response.data.largeImgUrl})`
     }
 
-    GetQuote() {
+    async GetQuote() {
+        const response = await api.get('api/quotes')
+        console.log(response.data)
 
+        setHTML('quote-area', new Quote(response.data).QuoteTemplate)
     }
 }
 
