@@ -1,0 +1,18 @@
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <div id="todo-count"></div>
+            <form onsubmit="app.ToDosController.CreateToDo()">
+                <div>
+                    <input type="text" name="description" id="description" min="1" max="500" required>
+                    <button type="submit"><i class="mdi mdi-plus-circle-outline"></i></button>
+                </div>
+            </form>
+
+            <div id="current-todos" class="">
+
+            </div>
+
+        </div>
+    </div>
+</section>
