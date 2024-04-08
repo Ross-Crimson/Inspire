@@ -68,6 +68,7 @@ export class PageLoadsController {
 
         let amPm = hours >= 12 ? 'pm' : 'am'
         if (hours > 12) hours = hours - 12
+        else if (hours == 0) hours = 12
 
         let currTime = hours.toString() + ':' + minutes + ' ' + amPm
 
