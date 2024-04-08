@@ -43,6 +43,8 @@ class ToDosService {
 
         const todoIndex = AppState.toDos.findIndex(todo => todo.id == todoId)
         AppState.toDos.splice(todoIndex, 1)
+
+        this.RemainingTodoCount()
     }
 }
 
